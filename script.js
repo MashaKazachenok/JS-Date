@@ -30,6 +30,10 @@ function getTimezoneOffset () {
 }
 
 function formatDate (date) {
+
+	var formatElement =  document.getElementById('format');
+	var format = formatElement.value;
+
 	var options = {
 		year: "numeric", 
 		month: "short",
@@ -39,5 +43,5 @@ function formatDate (date) {
 		second: "2-digit"
 	};
 
-	return date.toLocaleDateString("en-US", options);
+	return date.toLocaleDateString(format, options);
 }
